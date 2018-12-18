@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: -webkit-gradient(linear, 0 0, 0 150%, from(#FFCCCC), to(#99CCCC));
+    font-size: 15pt;
+    font-family: cursive;
+    text-align: center;
+}
+/*拼图*/
+.puzzle {
+    margin: auto;
+    position: relative;
+    width: 480px;
+    height: 480px;
+}
+/*小拼图*/
+.puzzle div {
+    position: absolute;
+    text-align: left;
+    font-size: 0px;
+}
+/*非空拼图*/
+.notempty {
+    border: 2px solid black;
+    background-image: url("picture.jpg");
+}
+/*成功后空白拼图补全*/
+.complete {
+    border: 2px solid black;
+    background-image: url("picture.jpg");
+}
+
+/*显示区*/
+#display {
+    margin: auto;
+    width: 600px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+/*时间显示*/
+#timeDisplay {
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 60px;
+    background-color: white;
+    border: 1px gray solid;
+}
+/*步数显示*/
+#stepDisplay {
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 60px;
+    background-color: white;
+    border: 1px gray solid;
+}
+/*难度选择*/
+#level{
+    margin-top: 20px;
+}
+
+#showOriginal {
+    margin: 20px 50px;
+    width: 150px;
+    font-weight: bold;
+    height: 30px;
+}
+/*打乱拼图*/
+#shuffle {
+    width: 150px;
+    font-weight: bold;
+    height: 30px;
+}
+/*隐藏原图*/
+.original {
+    float: left; 
+    opacity: 0;
+}
+/*显示原图*/
+.show {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-left: 30px;
+    opacity: 1;
+}
+/*鼠标经过可移动的拼图会有样式变化*/
+.movablepiece:hover {
+    text-decoration: underline;
+    font-size: 18pt;
+}
+.notempty:hover {
+    box-shadow: 2px 2px 15px black;
+}
+
+/* 3*3 */
+.style3 {
+    width: 158px;
+    height: 158px;
+}
+/*位置*/
+.style3_1, .style3_2, .style3_3 {
+    top: 0px;
+}
+.style3_4, .style3_5, .style3_6 {
+    top: 160px;
+}
+.style3_7, .style3_8, .style3_9 {
+    top: 320px;
+}
+.style3_1, .style3_4, .style3_7 {
+    left: 0px;
+}
+.style3_2, .style3_5, .style3_8 {
+    left: 160px;
+}
+.style3_3, .style3_6, .style3_9 {
+    left: 320px;
+}
+/*背景位置*/
+.style3 + .row1 {
+    background-position-y: 480px;
+}
+.style3 + .row2 {
+    background-position-y: 320px;
+}
+.style3 + .row3 {
+    background-position-y: 160px;
+}
+.style3 + .column1 {
+    background-position-x: 480px;
+}
+.style3 + .column2 {
+    background-position-x: 320px;
+}
+.style3 + .column3 {
+    background-position-x: 160px;
+}
+
+/* 4*4 */
+.style4 {
+    width: 118px;
+    height: 118px;
+}
+/*位置*/
+.style4_1, .style4_2, .style4_3, .style4_4 {
+    top: 0px;
+}
+.style4_5, .style4_6, .style4_7, .style4_8 {
+    top: 120px;
+}
+.style4_9, .style4_10, .style4_11, .style4_12 {
+    top: 240px;
+}
+.style4_13, .style4_14, .style4_15, .style4_16 {
+    top: 360px;
+}
+.style4_1, .style4_5, .style4_9, .style4_13 {
+    left: 0px;
+}
+.style4_2, .style4_6, .style4_10, .style4_14 {
+    left: 120px;
+}
+.style4_3, .style4_7, .style4_11, .style4_15 {
+    left: 240px;
+}
+.style4_4, .style4_8, .style4_12, .style4_16 {
+    left: 360px;
+}
+/*背景位置*/
+.style4 + .row1 {
+    background-position-y: 480px;
+}
+.style4 + .row2 {
+    background-position-y: 360px;
+}
+.style4 + .row3 {
+    background-position-y: 240px;
+}
+.style4 + .row4 {
+    background-position-y: 120px;
+}
+.style4 + .column1 {
+    background-position-x: 480px;
+}
+.style4 + .column2 {
+    background-position-x: 360px;
+}
+.style4 + .column3 {
+    background-position-x: 240px;
+}
+.style4 + .column4 {
+    background-position-x: 120px;
+}
+/* 5*5 */
+.style5 {
+    width: 94px;
+    height: 94px;
+}
+/*位置*/
+.style5_1, .style5_2, .style5_3, .style5_4, .style5_5 {
+    top: 0px;
+}
+.style5_6, .style5_7, .style5_8, .style5_9, .style5_10 {
+    top: 96px;
+}
+.style5_11, .style5_12, .style5_13, .style5_14, .style5_15 {
+    top: 192px;
+}
+.style5_16, .style5_17, .style5_18, .style5_19, .style5_20 {
+    top: 288px;
+}
+.style5_21, .style5_22, .style5_23, .style5_24, .style5_25 {
+    top: 384px;
+}
+.style5_1, .style5_6, .style5_11, .style5_16, .style5_21 {
+    left: 0px;
+}
+.style5_2, .style5_7, .style5_12, .style5_17, .style5_22 {
+    left: 96px;
+}
+.style5_3, .style5_8, .style5_13, .style5_18, .style5_23 {
+    left: 192px;
+}
+.style5_4, .style5_9, .style5_14, .style5_19, .style5_24 {
+    left: 288px;
+}
+.style5_5, .style5_10, .style5_15, .style5_20, .style5_25 {
+    left: 384px;
+}
+/*背景位置*/
+.style5 + .row1 {
+    background-position-y: 480px;
+}
+.style5 + .row2 {
+    background-position-y: 384px;
+}
+.style5 + .row3 {
+    background-position-y: 288px;
+}
+.style5 + .row4 {
+    background-position-y: 192px;
+}
+.style5 + .row5 {
+    background-position-y: 96px;
+}
+.style5 + .column1 {
+    background-position-x: 480px;
+}
+.style5 + .column2 {
+    background-position-x: 384px;
+}
+.style5 + .column3 {
+    background-position-x: 288px;
+}
+.style5 + .column4 {
+    background-position-x: 192px;
+}
+.style5 + .column5 {
+    background-position-x: 96px;
+}
